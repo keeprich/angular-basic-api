@@ -1,0 +1,103 @@
+<h1>Welcome</h1>
+
+<!-- one way data binding -->
+<div class="topic_border">
+    <p>You've clicked <span (click)="countClick()">this</span> {{ clickCounter }} </p>
+</div>
+
+<br><br><br><br>
+<!-- two way data binding -->
+<div class="topic_border">
+<input type="text" [(ngModel)]="name" >
+<br><br>
+<strong>Your name is: </strong> 
+<span class="name_col">{{ name }}</span> 
+</div>
+
+
+<br><br><br><br>
+
+<!-- Templating -->
+
+<div class="topic_border">
+     <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+<p>The click counter <strong>IS GREATER</strong> than 4. </p>
+     </ng-template> 
+
+     <ng-template #none>
+         <p>The click counter is <strong>no greater</strong> than 4. </p>
+     </ng-template>
+    </div>
+
+    <br><br><br><br>
+<!-- style binding -->
+
+<div class="topic_border" [style.background-color]="clickCounter > 6 ? 'blue' : 'silver'" >
+    
+        <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+   <p>The click counter <strong>IS GREATER</strong> than 4. </p>
+        </ng-template> 
+   
+        <ng-template #none>
+            <p>The click counter is <strong>no greater</strong> than 4. </p>
+        </ng-template>
+       
+   </div>
+
+   <br><br><br>
+   <!-- to change multiple css style, we make use of [ngStyle] -->
+
+   <div class="topic_border" [ngStyle]="
+   {
+       'background-color': clickCounter > 5 ? 'pink' : 'yellow',
+       'border':           clickCounter > 6 ? '5px solid green' : 'none'
+   }
+   ">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+<p>The click counter <strong>IS GREATER</strong> than 4. </p>
+    </ng-template> 
+
+    <ng-template #none>
+        <p>The click counter is <strong>no greater</strong> than 4. </p>
+    </ng-template>
+   </div>
+
+
+   <br><br><br>
+
+   <!-- class binding -->
+
+   <div class="topic_border" [class.aStyleClass]="clickCounter > 4">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+<p>The click counter <strong>IS GREATER</strong> than 4. </p>
+    </ng-template> 
+
+    <ng-template #none>
+        <p>The click counter is <strong>no greater</strong> than 4. </p>
+    </ng-template>
+   </div>
+
+
+<br><br><br>
+
+<div class="topic_border" [ngClass]="setClasses()">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+<p>The click counter <strong>IS GREATER</strong> than 4. </p>
+    </ng-template> 
+
+    <ng-template #none>
+        <p>The click counter is <strong>no greater</strong> than 4. </p>
+    </ng-template>
+   </div>
+
+<!-- using multiple classes using ngClass -->
+
+
+
+   <!-- 
+       NB:
+       The '?' denote opttion.
+       The ':' denote else
+
+
+-->

@@ -1,0 +1,26 @@
+.topic_border {
+    border: solid 4px rgb(250, 5, 5);
+    padding: 50px;
+}
+
+.name_col {
+    color: red;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.aStyleClass {
+    background-image:url("https://images.unsplash.com/photo-1492138786289-d35ea832da43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.notStyleClass {
+    background-color: aqua;
+}

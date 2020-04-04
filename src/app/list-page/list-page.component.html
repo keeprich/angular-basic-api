@@ -1,0 +1,12 @@
+<p>list-page works!</p>
+
+<!-- adding or removing html element -->
+
+<h1>List of Beers</h1>
+<ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+        <p class="name">{{ brew.name }}</p>
+        <p classs="country">  {{ brew.country }}  </p>
+        <a href="{{ brew.website_url }}" class="site">site</a>
+    </li>
+</ul>
